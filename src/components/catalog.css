@@ -1,0 +1,118 @@
+.container{
+    width: clamp(500px, 95vw, 1600px);
+    margin: auto;
+    padding: 1rem;
+    min-height: 50vh;
+    background-color: hsla(208, 100%, 97%,.05);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    gap:.5rem;
+}
+
+.filterMenu{
+    width: 100%;
+    color: hsl(0, 0%, 7%);
+    font-size: .8rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    gap:.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 5px 14px -16px hsla(0, 0%, 0%, .8);
+}
+
+.filter{
+    padding: .5rem;
+    border:#111 solid 1px;
+    transition: all;
+    transition-duration: 300ms;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter:hover{
+    background-color: hsl(0, 0%, 7%,.15);
+}
+
+.card{
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    user-select: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:.5rem;
+    color:rgb(71, 71, 71);
+    border-top: 1px rgb(71, 71, 71,.3) solid;
+    transition: all;
+    transition-duration: 500ms;
+}
+
+.card .title{
+    position: relative;
+    top:-2rem;
+    padding: .2rem;
+    width: 100%;
+    color: hsl(208, 100%, 97%);
+    background-color: hsl(0, 0%, 13%,.8);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: all;
+    transition-duration: 500ms;
+}
+
+.card .price{
+    position: relative;
+    top:-2rem;
+    padding: .1rem;
+    width: 100%;
+    color: #111;
+    border: 1px solid #111;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: all;
+    transition-duration: 500ms;
+}
+.price::before{
+    content: "$";
+}
+
+.card:hover .title{
+    text-decoration: underline;
+}
+
+.card img{
+    transition: all;
+    transition-duration: 1s;
+}
+.card:hover img{
+    transform: scale(1.05);
+}
+
+.card:hover{
+    box-shadow: 0 0 10px -8px hsla(0, 0%, 0%, 0.5);
+}
+.card-body{
+    display: flex;
+    padding: 0 1rem;
+    font-family: "PT Sans Narrow", sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all;
+    overflow: hidden;
+    transition-duration: 500ms;
+}
+
